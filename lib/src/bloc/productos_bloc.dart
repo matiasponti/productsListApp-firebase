@@ -25,10 +25,10 @@ agregarProducto (ProductoModel producto) async {
   _cargandoController.sink.add(false);
 }
 
-Future<String> subirFoto (File imagen) async {
+Future<String> subirFoto (File foto) async {
   
   _cargandoController.sink.add(true);
-    final fotoUrl = await _productProvider.subirImagen(imagen);
+    final fotoUrl = await _productProvider.subirImagen(foto);
   _cargandoController.sink.add(false);
 
 return fotoUrl;
